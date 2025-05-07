@@ -1,7 +1,7 @@
 <div class="watch-page py-5">
 
   <!-- Video Player Section -->
-  <div class="watch-section container" [class.playing]="isPlaying()" #watchSection>
+  <div class="watch-section container px-0" [class.playing]="isPlaying()" #watchSection>
 
     <div class="video-wrapper">
 
@@ -16,7 +16,7 @@
       <div id="youtube-player"></div>
 
       <!-- Player Controls -->
-      <div class="controls-wrapper" #controlsWrapper>
+      <div class="controls-wrapper px-2" #controlsWrapper>
 
         <!-- Time and Seek Slider -->
         <div class="placeholder-glow d-flex align-items-center gap-3" id="videoTime">
@@ -95,28 +95,28 @@
     <swiper-container init="false" scrollbar="true" #swiperContainer>
 
       <!-- Episode Slides -->
-      <swiper-slide *ngFor="let item of episodeList">
+      <swiper-slide *ngFor="let item of videoList">
 
         <!-- Episode Card -->
         <div class="card">
 
           <!-- Thumbnail with Play Overlay -->
           <div class="card__thumbnail">
-            <img [src]="item.thumbnail" [alt]="item.title" class="card__image">
+            <img [src]="item.thumbnail_url" [alt]="item.title" class="card__image">
             <div class="card__overlay">
-              <div class="card__play" (click)="goToWatchPage(item.watchID)">
+              <div class="card__play" (click)="goToWatchPage(item.videoKey || '')">
                 <i class="bi bi-play-fill card__play-icon"></i>
               </div>
             </div>
-            <div class="card__duration">
+            <!-- <div class="card__duration">
               <span>{{ formatTime(item.duration) }}</span>
-            </div>
+            </div> -->
           </div>
 
           <!-- Episode Details -->
           <div class="card__content">
             <h3 class="card__title">{{ item.title }}</h3>
-            <div class="card__actions">
+            <!-- <div class="card__actions">
               <button class="card__button card__button--primary">
                 <i class="bi bi-share card__button-icon"></i>
                 <span>Share</span>
@@ -125,7 +125,7 @@
                 <i class="bi bi-heart-fill card__button-icon"></i>
                 <span>Favorite</span>
               </button>
-            </div>
+            </div> -->
           </div>
 
         </div> <!-- End Card -->

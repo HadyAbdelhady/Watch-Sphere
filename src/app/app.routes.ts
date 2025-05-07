@@ -33,14 +33,14 @@ export const routes: Routes = [
         path: 'admin',
         loadComponent: () => import('./features/admin/admin.component').then(m => m.AdminComponent)
     },
-    // {
-    //   path: 'login',
-    //   loadComponent: () => import('./core/login/login.component').then(m => m.LoginComponent)
-    // },
-    // {
-    //   path: 'register',
-    //   loadComponent: () => import('./core/register/register.component').then(m => m.RegisterComponent)
-    // },
+    {
+      path: 'login',
+      loadComponent: () => import('./core/login/login.component').then(m => m.LoginComponent)
+    },
+    {
+      path: 'register',
+      loadComponent: () => import('./core/register/register.component').then(m => m.RegisterComponent)
+    },
     {
         path: '**',
         loadComponent: () => import('./shared/components/error/error.component').then(m => m.ErrorComponent)

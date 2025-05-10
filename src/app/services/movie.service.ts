@@ -24,7 +24,7 @@ export class MovieService {
           throw error;
         })
       );
-  }
+  } 
 
   // Get popular movies
   getPopularMovies(): Observable<Movie[]> {
@@ -71,6 +71,71 @@ export class MovieService {
         })
       );
   }
+  //------------------------ admin movies -----------------------------------
+// Get now playing movies
+getNowPlayingMovies(): Observable<{ totalResults: number, movies: Movie[] }> {
+  return this.http.get(`${this.apiBaseUrl}/movie/now_playing?api_key=${this.apiKey}`)
+    .pipe(
+      map((response: any) => {
+        const totalResults = response.total_results;
+        const movies = response.results.map((movie: any) => this.transformMovieData(movie));
+        return { totalResults, movies };
+      }),
+      catchError(error => {
+        console.error('Error fetching now playing movies:', error);
+        return of({ totalResults: 0, movies: [] });
+      })
+    );
+}
+
+// Get top rated movies
+getTopRatedMovies(): Observable<{ totalResults: number, movies: Movie[] }> {
+  return this.http.get(`${this.apiBaseUrl}/movie/top_rated?api_key=${this.apiKey}`)
+    .pipe(
+      map((response: any) => {
+        const totalResults = response.total_results;
+        const movies = response.results.map((movie: any) => this.transformMovieData(movie));
+        return { totalResults, movies };
+      }),
+      catchError(error => {
+        console.error('Error fetching top rated movies:', error);
+        return of({ totalResults: 0, movies: [] });
+      })
+    );
+}
+
+// Get upcoming movies
+getUpcomingMovies(): Observable<{ totalResults: number, movies: Movie[] }> {
+  return this.http.get(`${this.apiBaseUrl}/movie/upcoming?api_key=${this.apiKey}`)
+    .pipe(
+      map((response: any) => {
+        const totalResults = response.total_results;
+        const movies = response.results.map((movie: any) => this.transformMovieData(movie));
+        return { totalResults, movies };
+      }),
+      catchError(error => {
+        console.error('Error fetching upcoming movies:', error);
+        return of({ totalResults: 0, movies: [] });
+      })
+    );
+}
+
+// Get popular movies
+getPopularMoviestotal(): Observable<{ totalResults: number, movies: Movie[] }> {
+  return this.http.get(`${this.apiBaseUrl}/movie/popular?api_key=${this.apiKey}`)
+    .pipe(
+      map((response: any) => {
+        const totalResults = response.total_results;
+        const movies = response.results.map((movie: any) => this.transformMovieData(movie));
+        return { totalResults, movies };
+      }),
+      catchError(error => {
+        console.error('Error fetching popular movies:', error);
+        return of({ totalResults: 0, movies: [] });
+      })
+    );
+}
+  //------------------------------------------------------------
 
   // Transform basic movie data to match your Movie interface
   private transformMovieData(movie: any): Movie {

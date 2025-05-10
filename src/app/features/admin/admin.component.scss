@@ -1,0 +1,81 @@
+body {
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-dashboard {
+  .admin-header {
+    margin-top: 20px;
+
+    .admin-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .admin-info {
+      h2 {
+        color: #ffffff;
+      }
+
+      p {
+        color: #cccccc;
+      }
+    }
+  }
+
+  .chart-card {
+    background: linear-gradient(to right, #1a2b3c, #2d4b66);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.5px;  
+  }
+
+  .reviews-section {
+    h4 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    table {
+      background: linear-gradient(to right, #1a2b3c, #2d4b66);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      overflow: hidden;
+      color: #fff;
+
+      thead {
+        background: linear-gradient(to right, #1a2b3c, #2d4b66);
+
+        th {
+          font-size: 1.1rem;           
+          letter-spacing: 1.5px;        
+          text-transform: uppercase;    
+        }
+      }
+
+      th, td {
+        vertical-align: middle;
+      }
+
+      img {
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+    }
+  }
+}

@@ -1,59 +1,58 @@
-# MovieApp
+# 🎬 Faragny Maak
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+A Netflix-like streaming platform where users can explore, watch, and manage their favorite movies and series — all powered by real-time data and Firebase.
 
-## Development server
+🌐 Live Demo: [https://faragny-m3ak.vercel.app](https://faragny-m3ak.vercel.app)
 
-To start a local development server, run:
+---
+
+## 🚀 Features
+
+- 🔍 Browse and watch movies and TV series with a sleek, user-friendly interface
+- 📡 Real-time data fetched from a public RESTful API
+- 🔐 Firebase Authentication for secure login and profile management
+- ⭐ Add movies/series to favorites and watch-list
+- 🕒 Track viewing history
+- 🎯 Filter content by categories (e.g., Action, Comedy, Drama)
+- 🏆 View Top 10 trending movies
+- 💬 Responsive and modern design with Bootstrap styling
+- 💳 Integrated payment service (Stripe) for premium content access
+
+> 🧪 **Test Payment:** Use card number `4242 4242 4242 4242`, any future date for expiration, and any 3-digit CVC to test payment flow in development.
+
+---
+
+## 🛠 Technologies Used
+
+- 🔧 Angular
+- 📡 RESTful APIs
+- 🔥 Firebase (Authentication, Realtime Database)
+- 🖥️ HTML5, CSS3
+- 🎨 Bootstrap
+
+---
+
+## 📁 Project Setup
+
+To run the project locally:
 
 ```bash
+git clone https://github.com/MarizSedhom/FaragnyMaak.git
+cd FaragnyMaak
+npm install
 ng serve
 ```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📸 Screenshots
+![image](https://github.com/user-attachments/assets/d03b38be-0474-444d-b56c-6b9ffd53a554)
 
-## Code scaffolding
+![image](https://github.com/user-attachments/assets/f5d20305-9462-4f43-ac3b-bd22fdc25ec6)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+![image](https://github.com/user-attachments/assets/b077930f-beb5-432d-a3f2-6207e8a150f1)
 
-```bash
-ng generate component component-name
-```
+![image](https://github.com/user-attachments/assets/c42c169f-ad08-48b7-a8ac-36afb5e5638a)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+![image](https://github.com/user-attachments/assets/25c36643-6c97-49c2-94dd-d069a49fa674)
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
